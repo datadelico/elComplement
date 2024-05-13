@@ -21,21 +21,23 @@ if ( ! defined( 'WPINC' ) ) {
 // Incluir el archivo con las funciones del plugin
 include(plugin_dir_path(__FILE__) . 'includes/pl1eg_functions.php');
 
+/*
 // Función para activar el plugin
-/*function pl1eg_activate() {
+function pl1eg_activate() {
     // Activar las modificaciones en el frontend y backend
     pl1eg_frontend_modifications();
 }
 */
 add_action('admin_menu', 'pl1eg_elcomplement_admin_menu');
 
+/*
 // Función para desactivar el plugin
-/*function pl1eg_deactivate() {
+function pl1eg_deactivate() {
     // Desactivar las modificaciones en el frontend y backend
     pl1eg_remove_frontend_modifications();
     
 }
-*/
+
 // Función de desinstalación para limpiar la base de datos
 function pl1eg_uninstall() {
     // Limpiar
@@ -44,5 +46,5 @@ function pl1eg_uninstall() {
 
 // Registrar la función de desinstalación
 //register_uninstall_hook(__FILE__, 'pl1eg_uninstall');
-
+*/
 ?>
