@@ -9,7 +9,8 @@ body {
     line-height: 1.6; /* Estableix l'altura de línia per als paràgrafs */
 }
 
-.new-label {
+/* Estil per a l'etiqueta NEW */
+.pl1eg-new-label{
     color: red; /* Canvia el color del text de l'etiqueta NEW a vermell */
     font-weight: bold; /* Fa que el text de l'etiqueta NEW sigui en negreta */
 }

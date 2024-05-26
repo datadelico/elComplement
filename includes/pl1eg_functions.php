@@ -110,7 +110,7 @@ function pl1eg_modify_post_title($title, $id) {
         $post_date = get_the_date('Y-m-d', $id); // Obté la data de publicació del post
         $days_diff = (strtotime(date('Y-m-d')) - strtotime($post_date)) / (60 * 60 * 24); // Calcula la diferència en dies
         if ($days_diff <= $new_days) { // Comprova si la diferència és menor o igual al nombre de dies especificat
-            $title = '<span style="color:red;">NEW</span> ' . $title; // Afegeix "NEW" en vermell davant del títol
+            $title = '<span class="pl1eg-new-label">NEW</span> ' . $title; // Afegeix "NEW" en vermell davant del títol
         }
     }
     return $title;
