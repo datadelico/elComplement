@@ -1,4 +1,15 @@
-/* Frontend styles */
+/* Estils per al frontend del plugin elComplement */
+
 body {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Canvia el color de fons del cos de la pàgina */
+}
+
+.entry-content p {
+    font-size: 18px; /* Canvia la mida de la font dels paràgrafs dins del contingut de l'entrada */
+    line-height: 1.6; /* Estableix l'altura de línia per als paràgrafs */
+}
+
+.new-label {
+    color: red; /* Canvia el color del text de l'etiqueta NEW a vermell */
+    font-weight: bold; /* Fa que el text de l'etiqueta NEW sigui en negreta */
 }

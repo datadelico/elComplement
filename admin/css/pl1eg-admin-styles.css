@@ -1,9 +1,22 @@
-/* Estils per a l'administració */
+/* Estils per a l'administració del plugin elComplement */
+
 .wrap h1 {
-    color: #0073aa;
+    color: #0073aa; /* Canvia el color del títol a blau */
 }
 
-.pl1eg-icon {
-    width: 20px; /* Ajusta l'amplada de la icona */
-    height: 20px; /* Ajusta l'alçada de la icona */
+input[type="number"] {
+    width: 50px; /* Estableix una amplada fixa per als inputs numèrics */
 }
+
+input[type="checkbox"] {
+    margin-right: 10px; /* Afegeix un marge a la dreta dels checkboxes */
+}
+
+.submit {
+    background-color: #0073aa; /* Canvia el color de fons del botó de submissió */
+    color: #fff; /* Canvia el color del text del botó de submissió a blanc */
+    border: none; /* Elimina el contorn del botó */
+    padding: 10px 20px; /* Afegeix espaiat intern al botó */
+    cursor: pointer; /* Canvia el cursor a un dit apuntador quan es passa per sobre el botó */
+}
+
