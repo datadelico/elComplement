@@ -1,10 +1,19 @@
 <?php
-/**
- * Plugin Name: el Complement
- * Description: Un plugin simple per demostrar el desenvolupament de plugins de WordPress.
- * Version: 1.0
- * Author: [El teu nom]
- */
+/*
+ * @wordpress-plugin
+ * Plugin Name:       elComplement
+ * Plugin URI:        https://datadelico.com
+ * Description:       Aixó es una practica de com fer un plugin de Wordpress per M9 
+ * Version:           1.0.0
+ * Requires at least: 5.2
+ * Requires PHP:      7.2
+ * Author:            Esteban Garcia Ruiz
+ * Author URI:        https://datadelico.com
+ * Text Domain:       plugin-elComplement
+ * License:           GPL v2
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ *
+*/
 
 // Evita l'accés directe al fitxer
 if (!defined('ABSPATH')) {
