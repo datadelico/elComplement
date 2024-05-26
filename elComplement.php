@@ -41,6 +41,5 @@ add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'pl1eg_settings_l
 // Accions i filtres personalitzats per al frontend
 add_filter('the_content', 'pl1eg_modify_post_content');
 add_filter('the_title', 'pl1eg_modify_post_title', 10, 2);
-add_shortcode('pl1eg_shortcode', 'pl1eg_custom_shortcode');
 
 ?>

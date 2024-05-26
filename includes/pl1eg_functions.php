@@ -116,9 +116,5 @@ function pl1eg_modify_post_title($title, $id) {
     return $title;
 }
 
-// Afegeix un shortcode
-function pl1eg_custom_shortcode() {
-    return '<p>Aquest és el contingut del shortcode personalitzat.</p>'; // Retorna el contingut del shortcode
-}
 
 ?>
