@@ -1,48 +1,37 @@
 <?php
-/*
- * @wordpress-plugin
- * Plugin Name:       elComplement
- * Plugin URI:        https://datadelico.com
- * Description:       Aixó es una practica de com fer un plugin de Wordpress per M9 
- * Version:           1.0.0
- * Requires at least: 5.2
- * Requires PHP:      7.2
- * Author:            Esteban Garcia Ruiz
- * Author URI:        https://datadelico.com
- * Text Domain:       plugin-elComplement
- * License:           GPL v2
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- *
-*/
-// Si el archivo es llamado directamente, die.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+/**
+ * Plugin Name: el Complement
+ * Description: Un plugin simple per demostrar el desenvolupament de plugins de WordPress.
+ * Version: 1.0
+ * Author: [El teu nom]
+ */
+
+// Evita l'accés directe al fitxer
+if (!defined('ABSPATH')) {
+    exit;
 }
-// Incluir el archivo con las funciones del plugin
+
+// Inclou el fitxer de funcions
 include(plugin_dir_path(__FILE__) . 'includes/pl1eg_functions.php');
-/*
-// Función para activar el plugin
-function pl1eg_activate() {
-    // Activar las modificaciones en el frontend y backend
-    pl1eg_frontend_modifications();
-}
-*/
-add_action('admin_menu', 'pl1eg_elcomplement_admin_menu');
 
-/*
-// Función para desactivar el plugin
-function pl1eg_deactivate() {
-    // Desactivar las modificaciones en el frontend y backend
-    pl1eg_remove_frontend_modifications();
-    
-}
+// Hooks d'activació, desactivació i desinstal·lació
+register_activation_hook(__FILE__, 'pl1eg_activate_plugin');
+register_deactivation_hook(__FILE__, 'pl1eg_deactivate_plugin');
+register_uninstall_hook(__FILE__, 'pl1eg_uninstall_plugin');
 
-// Función de desinstalación para limpiar la base de datos
-function pl1eg_uninstall() {
-    // Limpiar
-    
-}
+// Accions per encolar scripts i estils
+add_action('wp_enqueue_scripts', 'pl1eg_enqueue_scripts');
+add_action('admin_enqueue_scripts', 'pl1eg_admin_enqueue_scripts');
 
-// Registrar la función de desinstalación
-//register_uninstall_hook(__FILE__, 'pl1eg_uninstall');
-*/
+// Afegeix un element al menú d'administració
+add_action('admin_menu', 'pl1eg_add_admin_menu');
+
+// Afegeix un enllaç de configuració a la pàgina de plugins
+add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'pl1eg_settings_link');
+
+// Accions i filtres personalitzats per al frontend
+add_filter('the_content', 'pl1eg_modify_post_content');
+add_filter('the_title', 'pl1eg_modify_post_title', 10, 2);
+add_shortcode('pl1eg_shortcode', 'pl1eg_custom_shortcode');
+
+?>

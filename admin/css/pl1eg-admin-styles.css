@@ -1,0 +1,9 @@
+/* Estils per a l'administració */
+.wrap h1 {
+    color: #0073aa;
+}
+
+.pl1eg-icon {
+    width: 20px; /* Ajusta l'amplada de la icona */
+    height: 20px; /* Ajusta l'alçada de la icona */
+}
